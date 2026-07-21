@@ -1,6 +1,6 @@
 # Project board — Where My Tax Dollars Go
 
-Updated: 2026-07-21 14:25 PDT
+Updated: 2026-07-21 14:38 PDT
 
 ## Objective
 
@@ -23,8 +23,8 @@ Maintain a trustworthy, privacy-first tax explainer while expanding it through s
 
 | Priority | State | Deliverable | Owner | Depends on | Completion evidence |
 | --- | --- | --- | --- | --- | --- |
-| P0 | review | Deep spending drill-down with payout/obligation/estimate labels | Drill-down integration owner | Eric approves combined scope for publication | All four spending findings resolved; independent re-review passed; complete reconciliation tests, browser drill-down QA, and full build pass |
-| P1 | review | Per-spouse and combined-household tax burden already present in combined candidate | Spouse implementation; integration controlled by P0 owner | Eric approves combined scope for publication | Independent allocation re-review passed; joint interaction and desktop/mobile visual QA passed; limitations are explicit |
+| P0 | published | Deep spending drill-down with payout/obligation/estimate labels | Drill-down integration owner | None | Independent review passed; release gate passed; live Medicare drill-down verified at the production URL |
+| P1 | published | Per-spouse and combined-household tax burden | Spouse implementation; integration controlled by P0 owner | None | Independent allocation review passed; release gate passed; live two-income joint allocation verified and reconciled |
 | P1 | done | Independent review of drill-down sources and calculation language | Drill-down independent-review agent | P0 implementation ready | Review requested four changes and confirmed same-basis federal, California top-level, and county reconciliation |
 | P2 | queued | Verify current tax brackets and federal/California/Santa Clara spending shares | Unassigned | Current feature releases settle | Source freshness report and passing boundary/total tests |
 | P3 | queued | Agent-agnostic project migration and company-system architecture | Migration and company systems architect | P0 and P1 releases finish; Eric approves any storage or account changes | Approved architecture, portable handoff standard, data/storage map, worker registry, migration/rollback plan, and validated first-phase handoff |
@@ -35,25 +35,22 @@ Maintain a trustworthy, privacy-first tax explainer while expanding it through s
 
 | Automation | State | Cadence | Purpose | Gate |
 | --- | --- | --- | --- | --- |
-| `resume-tax-spending-drill-down` | active | Hourly recovery | Resume the P0 build after interruption | Stop changing files after successful validation and publication |
+| `resume-tax-spending-drill-down` | deleted after success | Formerly hourly | P0 recovery completed | Production deployment and live verification succeeded |
 | `resume-spouse-tax-breakdown` | paused | Hourly definition retained | Preserve P1 recovery without concurrent writes | Resume only after P0 stabilizes shared files |
 | New architecture/resource-role scheduling | deferred | No automation created | Preserve capacity for P0 and P1 completion | Revisit only after both current releases finish or Eric reprioritizes |
 
 ## Current risks
 
-- Both feature tasks share one checkout and likely overlap in `app/page.tsx`; parallel writes risk lost work or a difficult merge.
-- The exact validated source is already a combined P0/P1 candidate. Publishing it would expose the spouse feature before its remaining QA, independent review, and owner scope approval.
 - The drill-down uses mixed fiscal years and different meanings of money. UI labels must distinguish paid/outlay, obligated/awarded, and ceiling/estimate figures.
-- The resolved spending findings and spouse-allocation language must remain unchanged between the reviewed candidate and publication.
-- Publication of the exact source would expose both P0 and P1, so Eric must explicitly approve that combined scope before the public deploy.
+- Future changes to the reviewed spending methodology or spouse-allocation language require fresh validation and independent review before publication.
 - No reliable platform usage meter is available; use the existing bounded-work ledger for scheduled expansion work.
 - Exact plan limits and connected-account capacity may be unavailable to agents; the resource manager must label unknowns and never infer balances.
 - Cross-platform migration could expose credentials or create split-brain project state unless the repository remains the approved source of truth during a staged migration.
 
 ## Manager recommendation
 
-Keep the exact reviewed combined working tree intact. Ask Eric to approve public publication of the combined P0 spending drill-down and P1 spouse allocation. If Eric declines the scope change, create and fully revalidate an isolated P0-only release state. Keep the two new operating-model roles and nationwide expansion deferred until the current release is published or explicitly redirected.
+Combined P0/P1 publication is complete. Preserve the deployed methodology and move to the next owner-approved priority; keep architecture, resource-management, and nationwide-expansion work gated by their existing approval and capacity requirements.
 
 ## Next manager review
 
-- After Eric approves or declines combined publication.
+- At the next owner priority decision after the combined release.

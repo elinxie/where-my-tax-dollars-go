@@ -33,4 +33,14 @@ Expand the live site so federal, California, and Santa Clara County spending cat
 - Spouse independent re-review: PASS after constraining joint inputs to W-2 wages used as an AGI proxy, declaring mixed W-2/self-employed households unsupported, and explaining joint-return recomputation before allocation.
 - Browser QA: Medicare context view hides percentages and explains the accounting-basis change; the joint two-income interaction reconciles; desktop and 390px mobile layouts have no horizontal overflow.
 - Automated gate: production build, lint, `git diff --check`, and 11 tests all pass through `pnpm test` plus `pnpm run lint`.
-- Publication remains blocked only on Eric's explicit approval of the combined public release. If declined, return to the project manager for a fully revalidated isolated P0-only candidate.
+- Eric approved the combined public release.
+
+## Deployment evidence — 2026-07-21 14:38 PDT
+
+- Published Sites version 2 from reviewed source commit `8314983bdeb2c3d0941b14a33fca702b02c4aabf`.
+- Production deployment succeeded at `https://where-my-tax-dollars-go.ericlinxie.chatgpt.site`.
+- Live P0 check: opening Medicare shows `Context, not a 100% split`, explains the CY2024 gross-cost versus FY2024 net-outlay basis change, and renders no percentage chart at that level.
+- Live P1 check: married filing jointly with $140,000 combined wages and $70,000 spouse wages renders two $15,419 allocated burdens, reconciles to the household result, and shows the reviewed joint-return explanation.
+- Final gate immediately before publication: production build, lint, `git diff --check`, and 11/11 tests passed.
+- Removed the unused generated duplicate `public/og 2.png`; the reviewed `public/og.png` and application behavior were unchanged.
+- Deleted the completed `resume-tax-spending-drill-down` recovery automation.
