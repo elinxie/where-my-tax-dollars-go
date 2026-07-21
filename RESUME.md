@@ -1,6 +1,25 @@
 # Resume checkpoint — Tax Dollars Explorer
 
-## Goal
+## Active goal — deep spending drill-down
+
+Expand the live site so every federal, California, and Santa Clara County spending category can be opened into progressively deeper program, agency, recipient, and contractor details. Emphasize Medicare, Medicaid/Medi-Cal, health systems, and other large brackets. Use primary public budget and award sources wherever possible, label mismatched fiscal years and approximate allocations, and avoid implying that an individual tax payment is literally earmarked.
+
+## Active work plan
+
+1. Preserve the current estimator and visual language.
+2. Research parallel federal, state, and county hierarchies, including representative government payees and company-financial context where defensible.
+3. Add keyboard-accessible chart and list drill-down interaction with breadcrumb/back navigation, definitions, dollar equivalents, source links, and coverage caveats.
+4. Build and test, then publish to the existing Sites project.
+
+## Recovery instructions
+
+- Start in `/Users/ericlinxie/Documents/Codex/2026-07-21/sites-plugin-sites-openai-bundled-create`.
+- Inspect `git status` before editing; preserve any unfinished user or agent changes.
+- Read the latest research artifacts in `research/` if present, then continue from the first incomplete plan item above.
+- Keep primary-source URLs and retrieval dates in the site data or `SOURCES.md`.
+- Do not replace the current site architecture or estimator.
+
+## Original goal
 
 Build and publish a public, privacy-first website that helps people understand why their taxes are high and where estimated tax dollars go. First release covers Santa Clara County, California; architecture should support all U.S. states and counties.
 

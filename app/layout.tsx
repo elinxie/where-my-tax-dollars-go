@@ -4,6 +4,7 @@ import { headers } from "next/headers";
 import "./globals.css";
 import "./sources.css";
 import "./a11y.css";
+import "./drilldown.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
