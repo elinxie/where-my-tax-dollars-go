@@ -31,3 +31,24 @@ test("each worker receives a separate Social Security wage cap", () => {
   assert.ok(twoEarners.payroll > oneEarner.payroll);
 });
 
+test("2025 federal computation-worksheet boundary is source-backed for each supported status", () => {
+  const cases = [
+    ["single", 15750, 16914],
+    ["joint", 31500, 11828],
+    ["head", 23625, 15175],
+  ];
+
+  for (const [status, deduction, expectedTax] of cases) {
+    const result = calculateEstimate({ ...defaults, employer: "self", income: deduction + 100000, status });
+    assert.equal(result.fed, expectedTax, `${status} must match the 2025 IRS Tax Computation Worksheet at $100,000 taxable income`);
+  }
+});
+
+test("2025 employee payroll boundaries use the official Social Security cap and Medicare rates", () => {
+  const atCap = calculateEstimate({ ...defaults, income: 176100, status: "single" });
+  const oneDollarMore = calculateEstimate({ ...defaults, income: 176101, status: "single" });
+  const expectedAtCap = 176100 * (.062 + .0145 + .012);
+
+  assert.ok(Math.abs(atCap.payroll - expectedAtCap) < 1e-8);
+  assert.ok(Math.abs(oneDollarMore.payroll - atCap.payroll - (.0145 + .012)) < 1e-8);
+});

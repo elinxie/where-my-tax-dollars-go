@@ -56,3 +56,35 @@ test("reported zero actual expenditure has a distinct status", () => {
   assert.equal(zeroActual.status, "reported-actual-expenditure");
   assert.equal(moneyStatusLabels[zeroActual.status], "Reported actual expenditure");
 });
+
+test("official release totals and top-level spending values remain source-backed", () => {
+  assert.deepEqual(
+    spendingLayers.federal.children.map(({ id, amount }) => [id, amount]),
+    [
+      ["ss", 1_460_918_000_000], ["medicare", 874_133_000_000], ["interest", 879_879_000_000],
+      ["defense", 873_523_000_000], ["health", 911_290_000_000], ["income", 670_548_000_000],
+      ["veterans", 325_645_000_000], ["education", 306_370_000_000], ["transport", 136_582_000_000],
+      ["other", 296_373_000_000],
+    ],
+  );
+  assert.equal(spendingLayers.federal.amount, 6_735_261_000_000);
+
+  assert.deepEqual(
+    spendingLayers.state.children.map(({ id, amount }) => [id, amount]),
+    [
+      ["ca-hhs", 132_875_970_000], ["ca-k12", 82_151_357_000], ["ca-higher", 23_455_629_000],
+      ["ca-transport", 19_810_046_000], ["ca-corrections", 17_515_888_000], ["ca-gov", 17_177_676_000],
+      ["ca-courts", 10_813_274_000], ["ca-natural", 7_972_246_000], ["ca-housing", 9_278_395_000],
+    ],
+  );
+  assert.equal(spendingLayers.state.amount, 321_050_481_000);
+
+  assert.deepEqual(
+    spendingLayers.county.children.map(({ id, amount }) => [id, amount]),
+    [
+      ["scc-health", 7_125_878_095], ["scc-finance", 2_750_431_233], ["scc-families", 1_376_597_543],
+      ["scc-safety", 1_177_596_302], ["scc-land", 612_837_192],
+    ],
+  );
+  assert.equal(spendingLayers.county.amount, 13_043_340_365);
+});
