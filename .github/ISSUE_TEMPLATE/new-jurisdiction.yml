@@ -1,0 +1,22 @@
+name: New jurisdiction
+description: Propose a state or locality for a future data release.
+title: "coverage: "
+labels: [coverage]
+body:
+  - type: input
+    id: jurisdiction
+    attributes:
+      label: Jurisdiction
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Primary tax and budget sources
+      description: Include official links, years, and tables/pages where possible.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Important local context or limitations

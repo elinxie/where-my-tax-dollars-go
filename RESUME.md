@@ -18,15 +18,14 @@ Build and publish a public, privacy-first website that helps people understand w
 
 - Sites starter initialized.
 - Dependencies installed with pnpm because the bundled runtime does not expose npm.
-- Development server should run at http://localhost:3000/ in retained session 34187.
+- Initial public release is live on Sites and has been pushed to GitHub `main`.
+- Codex project: `sites-plugin-sites-openai-bundled-create` (`b4a80b83-6596-4116-b2bf-f01f1399df8b`).
 
 ## Remaining work
 
-1. Verify current primary-source tax brackets and federal/California/Santa Clara spending percentages.
-2. Implement the interactive single-page calculator and extensible jurisdiction data model.
-3. Build and validate.
-4. Create/push/save/deploy through Sites.
-5. Schedule a conservative follow-up automation for nationwide expansion after confirming cadence and usage constraints.
+1. Review the project-scaffolding pull request and merge it to `main`.
+2. Verify current primary-source tax brackets and federal/California/Santa Clara spending percentages before the next tax-year update.
+3. Activate a conservative nationwide-expansion automation after the owner confirms a cadence.
 
 ## Review findings incorporated
 
@@ -38,5 +37,4 @@ Build and publish a public, privacy-first website that helps people understand w
 
 ## External blockers
 
-- GitHub CLI is not installed in this environment. A public GitHub repository cannot be created or pushed until `gh` is installed and authenticated.
-- The user has not yet confirmed the proposed weekly/monthly/quarterly automation cadence, so no recurring task has been activated.
+- The owner has not yet confirmed the proposed weekly/monthly/quarterly automation cadence, so no recurring task has been activated.

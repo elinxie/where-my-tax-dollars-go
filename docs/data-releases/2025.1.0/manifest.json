@@ -1,0 +1,12 @@
+{
+  "release": "2025.1.0",
+  "status": "initial-public-coverage",
+  "jurisdiction": "Santa Clara County, California, United States",
+  "taxYear": 2025,
+  "fiscalYears": ["FY 2025-26"],
+  "scope": ["basic W-2 federal and California estimate", "federal, California, and Santa Clara County spending context"],
+  "sourceInventory": "../../../SOURCES.md",
+  "methodology": "../../../METHODOLOGY.md",
+  "limitations": ["educational estimate", "county budget mix is not a personal tax allocation", "not a tax return"],
+  "releasedAt": "2026-07-21"
+}

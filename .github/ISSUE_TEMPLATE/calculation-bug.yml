@@ -1,0 +1,21 @@
+name: Calculation issue
+description: Report a reproducible estimator problem without sharing personal information.
+title: "calculation: "
+labels: [calculation]
+body:
+  - type: markdown
+    attributes:
+      value: Use made-up or rounded inputs. Never post a tax return, address, or employer record.
+  - type: textarea
+    id: scenario
+    attributes:
+      label: Reproducible example
+      description: Filing status, rounded income, and non-sensitive selections.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual result
+    validations:
+      required: true
