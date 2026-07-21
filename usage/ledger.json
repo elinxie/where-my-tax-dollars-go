@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "proxyOnly": true,
+  "defaultRunPointLimit": 12,
+  "pointRules": {
+    "primarySourceReviewed": 1,
+    "buildOrTestCycle": 1,
+    "specialistReview": 2,
+    "imageGeneration": 3,
+    "jurisdictionPackage": 4
+  },
+  "runs": [
+    {
+      "date": "2026-07-21",
+      "task": "santa-clara-v0.1.0",
+      "points": 12,
+      "capped": true,
+      "platformUsageSignal": "unavailable",
+      "result": "Built, reviewed, tested, and prepared initial Sites release"
+    }
+  ]
+}

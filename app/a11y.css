@@ -1,0 +1,14 @@
+:focus-visible {
+  outline: 3px solid #fb6548;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+@media (max-width: 500px) {
+  footer { align-items: flex-start; flex-direction: column; }
+  footer p:nth-child(2) { margin: 0; }
+  .big-number { overflow-wrap: anywhere; }
+}
