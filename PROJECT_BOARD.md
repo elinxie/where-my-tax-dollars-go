@@ -8,19 +8,21 @@ Maintain a trustworthy, privacy-first tax explainer while expanding it through s
 
 ## Team and decision rights
 
+Roles are canonical and platform-independent. A "Codex task" ID below is legacy metadata for optional round-trip only; the role lives in these repository records, and any agent on any platform can assume it. See [`coordination/WORKERS.md`](coordination/WORKERS.md).
+
 | Role | Owner | Responsibility |
 | --- | --- | --- |
 | Product owner | Eric Linxie | Product priorities, tradeoffs, and final acceptance |
-| Project manager | Codex task `019f866e-2765-7b42-a9c1-573fd075a4f6` | Intake, sequencing, dependencies, schedule, risk, and status synthesis |
-| Migration and company systems architect | Codex task `019f8677-9674-74c2-b2c5-5e39c97c6c6e` | Design and, after owner approval, implement an agent-agnostic operating system for project data, handoffs, provenance, worker visibility, storage, backup, and migration |
-| Finance manager / accountant / resource/token manager | Codex task `019f8677-9461-7432-9f20-b71a59acae3d` | Treat AI usage limits, agents, models, platforms, and connected capacity as operating resources; maintain a truthful cost/capacity ledger; recommend workload routing and savings without analyzing the site's tax-dollar values |
-| Lead QA | Codex task `019f86ce-0dd3-7e80-87fa-05da576f309e` | Independently test completed code work, coordinate bounded specialist QA through the Project Manager, preserve reproducible evidence, and issue the signed QA summary required for release |
-| Drill-down implementation and integration owner | Codex task `019f866b-5037-7d30-a25d-c6ca3c2d0733` | Resolve review findings and control the existing combined P0/P1 working-tree candidate without discarding either feature |
+| Project manager | open role · legacy Codex task `019f866e-2765-7b42-a9c1-573fd075a4f6` | Intake, sequencing, dependencies, schedule, risk, and status synthesis |
+| Migration and company systems architect | open role · legacy Codex task `019f8677-9674-74c2-b2c5-5e39c97c6c6e` | Design and, after owner approval, implement an agent-agnostic operating system for project data, handoffs, provenance, worker visibility, storage, backup, and migration |
+| Finance manager / accountant / resource/token manager | open role · legacy Codex task `019f8677-9461-7432-9f20-b71a59acae3d` | Treat AI usage limits, agents, models, platforms, and connected capacity as operating resources; maintain a truthful cost/capacity ledger; recommend workload routing and savings without analyzing the site's tax-dollar values |
+| Lead QA | open role · legacy Codex task `019f86ce-0dd3-7e80-87fa-05da576f309e` | Independently test completed code work, coordinate bounded specialist QA through the Project Manager, preserve reproducible evidence, and issue the signed QA summary required for release |
+| Drill-down implementation and integration owner | open role · legacy Codex task `019f866b-5037-7d30-a25d-c6ca3c2d0733` | Resolve review findings and control the existing combined P0/P1 working-tree candidate without discarding either feature |
 | Drill-down research | Federal, California, and county specialist subagents | Primary-source research and evidence handoff to the implementation owner |
-| Spouse-breakdown implementation | Codex task `019f866b-ef3c-74a1-ad73-550960f77e13` | Per-spouse and household tax burden explanation |
+| Spouse-breakdown implementation | open role · legacy Codex task `019f866b-ef3c-74a1-ad73-550960f77e13` | Per-spouse and household tax burden explanation |
 | Independent reviewer | Drill-down independent-review agent | Source interpretation and material calculation review before release |
-| P2 data-verification owner | Codex task `019f86b4-b135-7131-94ed-f3e0d8c82c47` in an isolated worktree | Audit current federal, California, and Santa Clara sources and tests without changing production values or publishing |
-| P2 independent reviewer | Existing independent-review Codex task `019f867e-8eb4-7d43-add6-401b720a628e` | Reproduce material audit findings, verify impact calculations and invariant tests, and confirm production behavior is unchanged |
+| P2 data-verification owner | open role · legacy Codex task `019f86b4-b135-7131-94ed-f3e0d8c82c47` in an isolated worktree | Audit current federal, California, and Santa Clara sources and tests without changing production values or publishing |
+| P2 independent reviewer | open role · legacy independent-review Codex task `019f867e-8eb4-7d43-add6-401b720a628e` | Reproduce material audit findings, verify impact calculations and invariant tests, and confirm production behavior is unchanged |
 
 ## Work
 
@@ -46,8 +48,8 @@ The QA campaign can be executed within the agent-agnostic architecture: its risk
 | --- | --- | --- | --- | --- |
 | `resume-tax-spending-drill-down` | deleted after success | Formerly hourly | P0 recovery completed | Production deployment and live verification succeeded |
 | `resume-spouse-tax-breakdown` | deleted after success | Formerly hourly | P1 recovery completed | Combined production deployment and live verification succeeded |
-| Agent-agnostic architecture | active, event-driven | No recurring automation | Deliver the minimum viable cross-platform continuation kit before Codex capacity is exhausted | Repository-local scaffolding allowed; no external migration, spending, account connection, storage move, or recurring schedule |
-| Resource/token-manager role | tabled | No automation | Preserve remaining Codex capacity for the portability kit | Resume only after the kit is usable or Eric explicitly reprioritizes |
+| Agent-agnostic architecture | active, event-driven | No recurring automation | Deliver the minimum viable cross-platform continuation kit before platform capacity is exhausted | Repository-local scaffolding allowed; no external migration, spending, account connection, storage move, or recurring schedule |
+| Resource/token-manager role | tabled | No automation | Preserve remaining platform capacity for the portability kit | Resume only after the kit is usable or Eric explicitly reprioritizes |
 | Open FI$Cal expenditure research activation | deferred | Dependency-driven; no clock automation created | Use official California expenditure and vendor files as the lead source for tracing state spending | Activate only after both the Resource Manager and agent-agnostic architecture acceptance criteria are satisfied |
 | Lead QA activation | deferred | Dependency-driven; no clock automation created | Run an independent automated and human-centered quality baseline, then provide reusable QA gates for future code releases | Activate only after both prerequisite roles are accepted; large campaigns require an early checkpoint and capacity approval |
 
@@ -71,7 +73,7 @@ Combined P0/P1 publication is complete. Preserve the deployed methodology and mo
 
 P2 audit evidence passed independent review and is integrated, but correction implementation is tabled by Eric until the portability work is complete and Eric explicitly reopens it. Do not schedule, implement, review, or publish the P2 correction before that gate.
 
-Use the remaining confirmed 40% Codex capacity on one objective: a repository-contained continuation system Eric can use from another platform this week. The architect owns the minimum viable handoff kit and may implement reversible repository-local guides, templates, registries, and startup prompts. Table the resource/token manager and all P2/P4 implementation or research until the kit is usable. No role may move external data, connect accounts, spend money, change subscriptions, edit production behavior, or create recurring work without Eric's approval.
+Use the remaining confirmed 40% platform capacity on one objective: a repository-contained continuation system Eric can use from another platform this week. The architect owns the minimum viable handoff kit and may implement reversible repository-local guides, templates, registries, and startup prompts. Table the resource/token manager and all P2/P4 implementation or research until the kit is usable. No role may move external data, connect accounts, spend money, change subscriptions, edit production behavior, or create recurring work without Eric's approval.
 
 After the Resource Manager and agent-agnostic architecture are both accepted, activate the Lead QA baseline and bounded Open FI$Cal research checkpoint under the Resource Manager's WIP and reserve policy. The Project Manager should sequence them if capacity does not support both. Do not start either while a prerequisite remains queued, active, blocked, or under review.
 
