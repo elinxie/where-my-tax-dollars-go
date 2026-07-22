@@ -28,8 +28,8 @@ npm test
 - Data releases use `taxYear.release.patch`, beginning with `2025.1.0`.
 - Published data releases are immutable; corrections create a patch version.
 
-See [CHANGELOG.md](CHANGELOG.md), [docs/SOURCE_POLICY.md](docs/SOURCE_POLICY.md), and [data/coverage.json](data/coverage.json).
+See [CHANGELOG.md](CHANGELOG.md), [SOURCES.md](SOURCES.md), [docs/METHODOLOGY.md](docs/METHODOLOGY.md), [docs/SOURCE_POLICY.md](docs/SOURCE_POLICY.md), and [data/coverage.json](data/coverage.json).
 
 ## Contributing
 
-New jurisdictions must use primary government sources, state effective dates and exact tables, document any derivation, pass boundary and percentage-total tests, and receive independent review before release.
+New jurisdictions must use primary government sources, state effective dates and exact tables, document any derivation, pass boundary and percentage-total tests, and receive independent review before release. Start with [CONTRIBUTING.md](CONTRIBUTING.md) and the [data contribution guide](docs/DATA_CONTRIBUTING.md).

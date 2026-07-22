@@ -1,0 +1,26 @@
+name: Data correction
+description: Report a potentially incorrect tax rule, spending share, or source.
+title: "data: "
+labels: [data]
+body:
+  - type: markdown
+    attributes:
+      value: Do not include personal tax, address, payroll, or employer information.
+  - type: input
+    id: jurisdiction
+    attributes:
+      label: Jurisdiction and tax/fiscal year
+    validations:
+      required: true
+  - type: textarea
+    id: issue
+    attributes:
+      label: What appears incorrect?
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Primary government source and exact table/page
+    validations:
+      required: true
