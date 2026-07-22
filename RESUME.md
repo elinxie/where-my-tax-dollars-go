@@ -45,6 +45,8 @@ Build and publish a public, privacy-first website that helps people understand w
 1. Review the project-scaffolding pull request and merge it to `main`.
 2. Verify current primary-source tax brackets and federal/California/Santa Clara spending percentages before the next tax-year update.
 3. Activate a conservative nationwide-expansion automation after the owner confirms a cadence.
+4. After both the Resource Manager and agent-agnostic architecture are accepted, activate the Open FI$Cal expenditure-led research checkpoint in `RESUME-OPEN-FISCAL-EXPENDITURES.md`.
+5. After those same prerequisites are accepted, activate the Lead QA checkpoint in `RESUME-LEAD-QA.md` and require a baseline QA summary before the next code publication.
 
 ## Review findings incorporated
 
