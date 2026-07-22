@@ -7,6 +7,9 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
 export default defineConfig({
+  // Relative base so assets resolve whether the site is served at the domain
+  // root or under a project-Pages subpath (e.g. /where-my-tax-dollars-go/).
+  base: "./",
   plugins: [react()],
   // publicDir defaults to "public" → favicon/og/svg assets copied to dist-static.
   build: {
